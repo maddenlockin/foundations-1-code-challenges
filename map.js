@@ -18,8 +18,8 @@ Output:
 ['spot', 'rover', 'jumpy', 'einstein']
 */
 
-export function makeArrayOfNamesWithMap(arr) {
-    return [];
+export function makeArrayOfNamesWithMap(array) {
+    return array.map(item => item.name)
 }
 
 /*
@@ -32,8 +32,8 @@ Output:
     { name: 'einstein', isHungry: true, type: 'cat' },
 ]*/
 
-export function makeArrayWithIsHungry(arr) {
-    return [];
+export function makeArrayWithIsHungry(array) {
+    return array.map(item => {return {name: item.name, isHungry: true, type: item.type}});
 }
 
 /*
@@ -46,8 +46,8 @@ Output:
     { name: 'EINSTEIN', type: 'cat' },
 ]*/
 
-export function makeShoutingArray(arr) {
-    return [];
+export function makeShoutingArray(array) {
+    return array.map((item) => {return{'name': item.name.toUpperCase(), 'type': item.type}});
 }
 
 
@@ -57,8 +57,8 @@ Output:
 ['spotdog', 'roverdog', 'jumpyfrog', einsteincat']
 */
 
-export function makeStringArray(arr) {
-    return [];
+export function makeStringArray(array) {
+    return array.map(item => item.name + item.type);
 }
 
 /*
@@ -83,6 +83,6 @@ Output:
     ]
 */
 
-export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+export function makeArrayOfArraysOfArrays(array) {
+    //return array.map(item => {([['name',`${item.name}`],['type',`${item.type}`]])});
 }
